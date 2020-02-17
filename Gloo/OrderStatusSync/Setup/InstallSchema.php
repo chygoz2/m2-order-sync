@@ -16,35 +16,35 @@ class InstallSchema implements InstallSchemaInterface
                     'entity_id',
                     \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     null,
-                    ['identity' => true, 'unsugned' => true, 'nullable' => false, 'primary' => true],
+                    ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
                     'Entity ID'
                 )
                 ->addColumn(
                     'cart_id',
                     \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     null,
-                    ['unsugned' => true, 'nullable' => false],
+                    ['unsigned' => true, 'nullable' => false],
                     'Cart ID'
                 )
                 ->addColumn(
                     'magento_order_id',
                     \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     null,
-                    ['unsugned' => true, 'nullable' => false],
+                    ['unsigned' => true, 'nullable' => false],
                     'Magento Order Id'
                 )
                 ->addColumn(
                     'increment_id',
                     \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     null,
-                    ['unsugned' => true, 'nullable' => false],
+                    ['unsigned' => true, 'nullable' => false],
                     'Increment ID'
                 )
                 ->addColumn(
                     'original_increment_id',
                     \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     null,
-                    ['unsugned' => true, 'nullable' => false],
+                    ['unsigned' => true, 'nullable' => false],
                     'Original Increment ID'
                 )
                 ->addColumn(
@@ -58,7 +58,7 @@ class InstallSchema implements InstallSchemaInterface
                     'cart_id',
                     \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     null,
-                    ['unsugned' => true, 'nullable' => false],
+                    ['unsigned' => true, 'nullable' => false],
                     'Cart ID'
                 )
                 ->addColumn(
