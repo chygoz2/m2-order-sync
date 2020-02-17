@@ -35,16 +35,16 @@ class InstallSchema implements InstallSchemaInterface
                 )
                 ->addColumn(
                     'increment_id',
-                    \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
-                    null,
-                    ['unsigned' => true, 'nullable' => false],
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                    32,
+                    [],
                     'Increment ID'
                 )
                 ->addColumn(
                     'original_increment_id',
-                    \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
-                    null,
-                    ['unsigned' => true, 'nullable' => false],
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                    32,
+                    [],
                     'Original Increment ID'
                 )
                 ->addColumn(
