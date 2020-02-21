@@ -18,6 +18,7 @@ class OrderStatusObserverHelper {
         $data['status'] = $order->getData('status');
         $data['cartId'] = $order->getData('quote_id');
         $data['storeId'] = $order->getData('store_id');
+        $data['customerId'] = $order->getData('customer_id');
         $data['storeCode'] = $storeManager->getStore($data['storeId'])->getCode();
 
         $data['products'] = [];
@@ -52,6 +53,7 @@ class OrderStatusObserverHelper {
         $orderFactory->setCartId($orderData['cartId']);
         $orderFactory->setStatus($orderData['status']);
         $orderFactory->setStoreCode($orderData['storeCode']);
+        $orderFactory->setCustomerId($orderData['customerId']);
         $orderFactory->setProducts($orderData['serializeProductsData']);
         $orderFactory->setAddressInformation($orderData['serializeShippingAddressData']);
         $orderFactory->save();

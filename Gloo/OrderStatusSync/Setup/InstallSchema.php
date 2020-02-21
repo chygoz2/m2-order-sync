@@ -55,11 +55,11 @@ class InstallSchema implements InstallSchemaInterface
                     'Order Total'
                 )
                 ->addColumn(
-                    'cart_id',
+                    'customer_id',
                     \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     null,
                     ['unsigned' => true, 'nullable' => false],
-                    'Cart ID'
+                    'Customer Id'
                 )
                 ->addColumn(
                     'status',
