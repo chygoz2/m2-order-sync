@@ -96,6 +96,20 @@ class InstallSchema implements InstallSchemaInterface
                     ['default' => 0],
                     'Is Sync'
                 )
+                ->addColumn(
+                    'created_at',
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
+                    null,
+                    ['nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT],
+                    'Created at'
+                )
+                ->addColumn(
+                    'updated_at',
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
+                    null,
+                    ['nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE],
+                    'Updated at'
+                )
                 ->setComment('Gloo Order Status Sync Module');
 
                 $setup->getConnection()->createTable($table);

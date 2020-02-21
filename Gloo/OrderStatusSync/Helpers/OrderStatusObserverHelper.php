@@ -14,6 +14,8 @@ class OrderStatusObserverHelper {
         $data['magentoOrderId'] = $order->getData('entity_id');
         $data['orderTotal'] = $order->getData('total_due');
         $data['incrementId'] = $order->getData('increment_id');
+        $data['createdAt'] = $order->getData('created_at');
+        $data['updatedAt'] = $order->getData('updated_at');
         $data['originalIncrementId'] = $order->getData('original_increment_id');
         $data['status'] = $order->getData('status');
         $data['cartId'] = $order->getData('quote_id');
@@ -53,6 +55,8 @@ class OrderStatusObserverHelper {
         $orderFactory->setCartId($orderData['cartId']);
         $orderFactory->setStatus($orderData['status']);
         $orderFactory->setStoreCode($orderData['storeCode']);
+        $orderFactory->setCreatedAt($orderData['createdAt']);
+        $orderFactory->setUpdatedAt($orderData['updatedAt']);
         $orderFactory->setCustomerId($orderData['customerId']);
         $orderFactory->setProducts($orderData['serializeProductsData']);
         $orderFactory->setAddressInformation($orderData['serializeShippingAddressData']);
