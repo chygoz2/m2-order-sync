@@ -90,6 +90,20 @@ class InstallSchema implements InstallSchemaInterface
                     'Address Info'
                 )
                 ->addColumn(
+                    'payment_method',
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                    64,
+                    [],
+                    'Payment Method'
+                )
+                ->addColumn(
+                    'shipping_method',
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                    64,
+                    [],
+                    'Shipping Method'
+                )
+                ->addColumn(
                     'is_sync',
                     \Magento\Framework\DB\Ddl\Table::TYPE_BOOLEAN,
                     null,

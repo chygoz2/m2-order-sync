@@ -30,7 +30,6 @@ class OrderStatusChangeObserver implements ObserverInterface
   public function execute(\Magento\Framework\Event\Observer $observer)
   {
       try {
-
         $orderData = $this->orderStatusHelper::extractOrderData($observer,$this->_storeManager,$this->_productLoader);
         $this->orderStatusHelper::saveOrderData($this->orderFactory, $orderData);
 
