@@ -1,0 +1,21 @@
+{
+  "name": "gloo/Sales-order-sync",
+  "license": "OSL-3.0",
+  "type": "magento2-module",
+  "description": "Gloo sales order sync syncs sales order from magento with core",
+  "require": {
+  },
+  "authors":[
+    {
+      "name":"Engineering",
+      "email":"engineering@gloo.ng"
+    }
+  ],
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Gloo\\OrderStatusSync\\": ""
+    }
+  }
+
+}
