@@ -63,10 +63,9 @@ class UpdateOrderStatusInCore {
             $response = $this->httpClient->getResponse();
     
             $statusCode = $response->getStatusCode();
-            $message = $response->getMessage();
     
             if($statusCode !== 201 && $statusCode !== 200){
-                $this->logger->critical("Order with increment id {$incrementId} failed to sync with core, an attempt will be made in the next sync === failed with status $statusCode with message $message");
+                $this->logger->critical("Order with increment id {$incrementId} failed to sync with core, an attempt will be made in the next sync === failed with status $statusCode with message");
             } else {
                 $orderFactory = $this->orderFactory->create();
                 $order = $orderFactory->load($incrementId, 'increment_id');
