@@ -5,6 +5,7 @@
   "description": "Gloo sales order sync syncs sales order from magento with core",
   "require": {},
   "minimum-stability": "dev",
+  "prefer-stable": true, 
   "authors":[
     {
       "name":"Engineering",
