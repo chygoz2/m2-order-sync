@@ -3,8 +3,8 @@
   "license": "OSL-3.0",
   "type": "magento2-module",
   "description": "Gloo sales order sync syncs sales order from magento with core",
-  "require": {
-  },
+  "require": {},
+  "minimum-stability": "dev",
   "authors":[
     {
       "name":"Engineering",
