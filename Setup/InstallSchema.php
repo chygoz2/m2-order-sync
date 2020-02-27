@@ -104,11 +104,11 @@ class InstallSchema implements InstallSchemaInterface
                     'Shipping Method'
                 )
                 ->addColumn(
-                    'is_sync',
-                    \Magento\Framework\DB\Ddl\Table::TYPE_BOOLEAN,
+                    'tries',
+                    \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     null,
-                    ['default' => 0],
-                    'Is Sync'
+                    ['unsigned' => true, 'nullable' => false, 'default' => 0],
+                    'Number of tries'
                 )
                 ->addColumn(
                     'created_at',
