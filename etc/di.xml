@@ -1,13 +1,21 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Gloo\OrderStatusSync\Console\Command\ListAllFailedOrderSyncCommand">
+         <arguments>
+            <argument name="name" xsi:type="string">order:sync:list</argument>
+        </arguments>
+    </type>
+    <type name="Gloo\OrderStatusSync\Console\Command\RetryAllFailedOrderSyncCommand">
         <arguments>
-            <argument name="name" xsi:type="string">order:sync</argument>
+            <argument name="name" xsi:type="string">order:sync:retry</argument>
         </arguments>
     </type>
     <type name="Magento\Framework\Console\CommandListInterface">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="gloo_list_all_failed_order" xsi:type="object">Gloo\OrderStatusSync\Console\Command\ListAllFailedOrderSyncCommand</item>
+                <item name="gloo_retry_failed_order" xsi:type="object">Gloo\OrderStatusSync\Console\Command\RetryAllFailedOrderSyncCommand</item>
+            </argument>
+            <argument name="commands" xsi:type="array">
+                <item name="gloo_list_failed_order" xsi:type="object">Gloo\OrderStatusSync\Console\Command\ListAllFailedOrderSyncCommand</item>
             </argument>
         </arguments>
     </type>
