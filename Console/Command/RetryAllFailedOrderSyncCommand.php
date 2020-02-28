@@ -28,7 +28,7 @@
                     'IncrementId'
                 )
            ];
-           $this->setDescription('Retry all failed order sync or a specific using the --IncrementId flag');
+           $this->setDescription('Retry all failed order sync or a specific order using the --IncrementId flag');
            $this->setDefinition($options);
 
            parent::configure();
@@ -40,7 +40,7 @@
          * @param InputInterface $input
          * @param OutputInterface $output
          *
-         * @return null|int
+         * @return null
          */
         protected function execute(InputInterface $input, OutputInterface $output)
         {

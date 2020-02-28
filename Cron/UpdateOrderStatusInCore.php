@@ -64,7 +64,7 @@ class UpdateOrderStatusInCore {
             $this->httpClient->setHeaders([
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
-                'Magento-Core-Secret' => $magentoCoreSecret
+                'Secret' => $magentoCoreSecret
                ]);
             $this->httpClient->setRawBody(Json::encode($params));
        	    $this->httpClient->send();

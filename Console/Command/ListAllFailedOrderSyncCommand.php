@@ -54,7 +54,6 @@
         }
 
         public function processOrders($order){
-            $entity_id = $order['row']['entity_id'];
             $incrementId = $order['row']['increment_id'];
             $this->output->writeln("<info>| {$incrementId} failed to sync with core |</info>");
         }

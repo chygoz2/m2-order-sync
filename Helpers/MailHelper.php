@@ -40,7 +40,7 @@ class MailHelper {
                     'message'  => $message,
                 ])
                 ->setFrom($sender)
-                ->addTo($this->env->get('error_recipient_email'))
+                ->addTo($this->env->get('custom/error_recipient_email'))
                 ->getTransport();
             $transport->sendMessage();
 
