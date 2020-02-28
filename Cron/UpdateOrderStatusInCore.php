@@ -48,7 +48,6 @@ class UpdateOrderStatusInCore {
 
     public function syncWithCore($order){
         $magentoCoreSecret = $this->env->get('custom/magento_core_secret');
-        $order['row']['magento_core_secret'] = $magentoCoreSecret;
         $params = $order['row'];
         $incrementId = $params['increment_id'];
         $coreUri = $this->env->get('custom/core_uri');
@@ -65,6 +64,7 @@ class UpdateOrderStatusInCore {
             $this->httpClient->setHeaders([
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
+                'Magento-Core-Secret' => $magentoCoreSecret
                ]);
             $this->httpClient->setRawBody(Json::encode($params));
        	    $this->httpClient->send();
