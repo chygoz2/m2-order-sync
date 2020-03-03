@@ -5,8 +5,7 @@ class OrderStatusObserverHelper {
 
     public static function extractOrderData(
         \Magento\Framework\Event\Observer $observer, 
-        \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Catalog\Model\ProductFactory $productLoader
+        \Magento\Store\Model\StoreManagerInterface $storeManager
     )
     {
         $order = $observer->getEvent()->getOrder();
@@ -28,9 +27,7 @@ class OrderStatusObserverHelper {
         $data['products'] = [];
 
         foreach($order->getAllItems() as $item){
-          $productId = $item->getData('product_id');
-          $product = $productLoader->create()->load($productId);
-          $data['products'][] = $product->getData();
+          $data['products'][] = $item->getData();
         }
         $data['serializeProductsData'] = json_encode($data['products']);
 
