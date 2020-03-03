@@ -25,8 +25,8 @@ class MailHelper {
     public function sendEmail($message){
         try {
             $sender = [
-                'name' => $this->escaper->escapeHtml('Engineering'),
-                'email' => $this->escaper->escapeHtml('support@gloopro.com'),
+                'name' => $this->escaper->escapeHtml($this->env->get('custom/error_sender_name')),
+                'email' => $this->escaper->escapeHtml($this->env->get('custom/error_sender_email')),
             ];
             $transport = $this->transportBuilder
                 ->setTemplateIdentifier('send_email_email_template')
