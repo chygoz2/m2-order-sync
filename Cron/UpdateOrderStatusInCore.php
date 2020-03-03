@@ -78,7 +78,7 @@ class UpdateOrderStatusInCore {
                 $orderFactory->setTries($tries + 1);
                 $orderFactory->save();
                 if(($tries + 1) === 10){
-                    $this->mailHelper->sendEmail("Order with increment id {$incrementId} failed to sync with core after more than ten attempt with a status $statusCode, kindly investigate");
+                    $this->mailHelper->sendEmail("Order with increment id {$incrementId} failed to sync with core after more than ten attempts with a status $statusCode, kindly investigate");
                 }
                 $this->logger->critical("Order with increment id {$incrementId} failed to sync with core, an attempt will be made in the next sync === failed with status $statusCode");
             } else {
