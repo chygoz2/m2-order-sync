@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="gloosync" translate="label" sortOrder="10">
+            <label>Gloo order sync</label>
+        </tab>
+        <section id="glooordersync" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Environmental Variables</label>
+            <tab>gloosync</tab>
+            <resource>Gloo_Sync::gloo_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Environmental Configuration</label>
+                <field id="core_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Core Url</label>
+                    <comment>Core endpoint that sync wit it</comment>
+                </field>
+                <field id="core_secret" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Core Secret</label>
+                    <comment>Used for habd shaking between the two server</comment>
+                </field>
+                <field id="error_recipient_email" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Error Recipient Email</label>
+                    <comment>The email errors are sent to</comment>
+                </field>
+                <field id="error_sender_email" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Error Sender Email</label>
+                    <comment>The sender of the email</comment>
+                </field>
+                <field id="error_sender_name" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Error Sender Name</label>
+                    <comment>The name of the error sender</comment>
+                </field>
+            </group>
+        </section>
+</system>
+</config>

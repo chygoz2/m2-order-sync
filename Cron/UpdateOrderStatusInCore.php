@@ -9,7 +9,7 @@ class UpdateOrderStatusInCore {
     public $iterator;
     public $orderFactory;
     public $httpClient;
-    public $env;
+    public $dataHelper;
     public $mailHelper;
 
     public function __construct(
@@ -18,14 +18,14 @@ class UpdateOrderStatusInCore {
         \Gloo\OrderStatusSync\Model\OrderFactory $orderFactory,
         \Gloo\OrderStatusSync\Helpers\MailHelper $mailHelper,
         \Zend\Http\Client $httpClient,
-        \Magento\Framework\App\DeploymentConfig $env
+        \Gloo\OrderStatusSync\Helpers\Data $dataHelper
     )
     {
         $this->logger = $logger;
         $this->iterator = $iterator;
         $this->orderFactory = $orderFactory;
         $this->httpClient = $httpClient;
-        $this->env = $env;
+        $this->dataHelper = $dataHelper;
         $this->mailHelper = $mailHelper;
     }
 
@@ -47,10 +47,10 @@ class UpdateOrderStatusInCore {
     }
 
     public function syncWithCore($order){
-        $magentoCoreSecret = $this->env->get('custom/magento_core_secret');
+        $magentoCoreSecret = $this->dataHelper->getGeneralConfig('core_secret');
         $params = $order['row'];
         $incrementId = $params['increment_id'];
-        $coreUri = $this->env->get('custom/core_uri');
+        $coreUri = $this->dataHelper->getGeneralConfig('core_url');
         $tries = $params['tries'];
 
         if($tries > 10){
