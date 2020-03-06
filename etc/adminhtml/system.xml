@@ -13,19 +13,19 @@
                 <label>Environmental Configuration</label>
                 <field id="core_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Core Url</label>
-                    <comment>Core endpoint that sync wit it</comment>
+                    <comment>This endpoint sync with core</comment>
                 </field>
                 <field id="core_secret" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Core Secret</label>
-                    <comment>Used for habd shaking between the two server</comment>
+                    <comment>This is use to handshake with core</comment>
                 </field>
                 <field id="error_recipient_email" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Error Recipient Email</label>
-                    <comment>The email errors are sent to</comment>
+                    <comment>The email of the person errors are sent to</comment>
                 </field>
                 <field id="error_sender_email" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Error Sender Email</label>
-                    <comment>The sender of the email</comment>
+                    <comment>The email of the the sender</comment>
                 </field>
                 <field id="error_sender_name" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Error Sender Name</label>
