@@ -52,8 +52,15 @@ class UpdateOrderStatusInCore {
         $incrementId = $params['increment_id'];
         $coreUri = $this->dataHelper->getGeneralConfig('core_url');
         $tries = $params['tries'];
+        $updatedAt = $params['updated_at'];
+        $updatedAtInSeconds = strtotime($updatedAt);
+        $currentTime = time();
+        $lifeTimeOfOrderInSeconds = $currentTime - $updatedAtInSeconds;
+        $lifeTimeOfOrderInMinutes = $lifeTimeOfOrderInSeconds / 60;
 
-        if($tries > 10){
+        $timeDelayBeforeSync = $this->dataHelper->getGeneralConfig('time_delay_before_an_order_is_synced');
+
+        if($tries > 10 || $lifeTimeOfOrderInMinutes < $timeDelayBeforeSync){
             return;
         }
 
