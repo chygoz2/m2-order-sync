@@ -15,19 +15,19 @@
                     <label>Core Url</label>
                     <comment>This endpoint sync with core</comment>
                 </field>
-                <field id="core_secret" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="core_secret" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Core Secret</label>
                     <comment>This is use to handshake with core</comment>
                 </field>
-                <field id="error_recipient_email" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="error_recipient_email" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Error Recipient Email</label>
                     <comment>The email of the person errors are sent to</comment>
                 </field>
-                <field id="error_sender_email" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="error_sender_email" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Error Sender Email</label>
                     <comment>The email of the the sender</comment>
                 </field>
-                <field id="error_sender_name" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="error_sender_name" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Error Sender Name</label>
                     <comment>The name of the error sender</comment>
                 </field>
