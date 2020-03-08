@@ -11,7 +11,7 @@ class OrderStatusObserverHelper {
         $order = $observer->getEvent()->getOrder();
         $data = [];
         $data['magentoOrderId'] = $order->getData('entity_id');
-        $data['orderTotal'] = $order->getData('total_due');
+        $data['orderTotal'] = $order->getData('base_grand_total');
         $data['incrementId'] = $order->getData('increment_id');
         $data['createdAt'] = $order->getData('created_at');
         $data['updatedAt'] = $order->getData('updated_at');
